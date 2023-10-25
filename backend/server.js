@@ -1,7 +1,9 @@
 //This is using the es modules syntax. This is the same as const express = require('express'); To use this syntax, we need to add "type": "module" to the package.json file. Look on line 5 in package.json. 
 import express from 'express';
+import dotenv from 'dotenv';
+dotenv.config();
 import products from './data/products.js';
-const port = 5001;
+const port = process.env.PORT || 8000;
 
 const app = express();
 
