@@ -1,0 +1,23 @@
+{
+  "name": "proshop-v2",
+  "version": "2.0.0",
+  "description": "eCommerce Application Built with MERN Stack",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adam-brannon09/proshop.git"
+  },
+  "author": "Adam Brannon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adam-brannon09/proshop/issues"
+  },
+  "homepage": "https://github.com/adam-brannon09/proshop#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

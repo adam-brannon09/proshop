@@ -20,7 +20,7 @@ function ProductScreen() {
                     <Image src={product.image} alt={product.name} fluid />
                 </Col>
                 <Col md={4}>
-                    <ListGroup>
+                    <ListGroup variant='flush'>
                         <ListGroup.Item>
                             <h3>{product.name}</h3>
                         </ListGroup.Item>
