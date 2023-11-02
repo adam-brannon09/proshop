@@ -1,3 +1,5 @@
+
+// the asyncHandler is a custom middleware to handle errors
 import asyncHandler from '../middleware/asyncHandler.js';
 import Product from '../models/productModel.js';
 
@@ -15,7 +17,7 @@ const getProducts = asyncHandler(async (req, res) => {
 // @access  Public
 const getProductById = asyncHandler(async (req, res) => {
     const product = await Product.findById(req.params.id);
-
+    //if the product exists, return the product. Otherwise, throw an error.
     if (product) {
         return res.json(product);
     } else {

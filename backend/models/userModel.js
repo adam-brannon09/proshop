@@ -15,6 +15,7 @@ const userSchema = new mongoose.Schema({
         required: true,
     },
     isAdmin: {
+        //this will be used to determine if the user is an admin or not
         type: Boolean,
         required: true,
         default: false,

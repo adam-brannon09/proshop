@@ -3,8 +3,10 @@ import mongoose from 'mongoose';
 const reviewSchema = new mongoose.Schema({
 
     user: {
+        //this is the user that is writing the review
         type: mongoose.Schema.Types.ObjectId,
         required: true,
+        //specify which model this id is coming from
         ref: 'User',
     },
     name: {
@@ -21,14 +23,18 @@ const reviewSchema = new mongoose.Schema({
         required: true,
     },
 }, {
+    //this will add the createdAt and updatedAt fields to the database
     timestamps: true,
 });
 
 const productSchema = new mongoose.Schema({
 
     user: {
+        //this is the user that is creating the product
+
         type: mongoose.Schema.Types.ObjectId,
         required: true,
+        //specify which model this id is coming from
         ref: 'User',
     },
     name: {
@@ -51,6 +57,7 @@ const productSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    //reviews has its own schema which is pulled in here from above
     reviews: [reviewSchema],
 
     rating: {
@@ -74,8 +81,8 @@ const productSchema = new mongoose.Schema({
         default: 0,
     },
 
-
 }, {
+    //this will add the createdAt and updatedAt fields to the database
     timestamps: true,
 });
 

@@ -2,19 +2,23 @@ import mongoose from 'mongoose';
 
 const orderSchema = new mongoose.Schema({
     user: {
+        //this is the user that is creating the order
         type: mongoose.Schema.Types.ObjectId,
         required: true,
+        //specify which model this id is coming from
         ref: 'User',
     },
-    orderItems: [
+    orderItems: [ //this is an array of objects because there can be multiple items in an order
         {
             name: { type: String, required: true },
             qty: { type: Number, required: true },
             image: { type: String, required: true },
             price: { type: String, required: true },
             product: {
+                //this is the id of the product
                 type: mongoose.Schema.Types.ObjectId,
                 required: true,
+                //specify which model this id is coming from
                 ref: 'Product',
             },
         }

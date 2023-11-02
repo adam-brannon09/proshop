@@ -1,3 +1,6 @@
+//This file is used to connect to the MongoDB database using mongoose.
+//This is a standard way of connecting to MongoDB using mongoose.
+
 import mongoose from 'mongoose';
 
 
